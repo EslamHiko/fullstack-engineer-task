@@ -8,11 +8,12 @@ class SuccessMsg extends Component {
     super(props);
   }
   render() {
-
+    const toDo = this.props.candidate.uuid ? 'Edit' : 'Add'
+    
     return (
       <div>
         <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-          <h3 >{this.props.candidate ? 'Edit' : 'Add'} Candidate</h3>
+          <h3>{toDo} Candidate</h3>
         </div>
         <div className={['alert','alert-msg', 'alert-success',(this.props.success ? 'show' : '')].join(" ")} role="alert">
           <h4 className="alert-heading">Candidate Has Been Saved Successfully!</h4>
