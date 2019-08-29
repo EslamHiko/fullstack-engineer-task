@@ -1,7 +1,9 @@
 # Imports
 from graphene_sqlalchemy import SQLAlchemyObjectType, SQLAlchemyConnectionField
-from settings import db
+from sqlalchemy import create_engine
+from settings import db, basedir
 import graphene
+import os
 
 # Models
 class Candidate(db.Model):
@@ -22,3 +24,8 @@ class CandidateObject(SQLAlchemyObjectType):
 class Query(graphene.ObjectType):
     node = graphene.relay.Node.Field()
     candidates = SQLAlchemyConnectionField(CandidateObject)
+
+# Creating database tables
+engine = create_engine("sqlite:///"+os.path.join(basedir, 'data.sqlite'))
+if not engine.dialect.has_table(engine, "candidates"):
+    db.create_all()
