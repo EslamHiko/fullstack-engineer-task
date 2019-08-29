@@ -6,7 +6,7 @@
   - Searchbar
   - Filter Candidates By Their Jobs
   - Importing Candidates from CSV files
-  - Exporting Candidates from CSV files
+  - Exporting Candidates as CSV file
   - Deleting all Candidates from database
 
 ### How to run (Server)
