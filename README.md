@@ -19,7 +19,7 @@
 
 ### How to run (Frontend)
   1. Open `/frontend` folder
-  2. install dependencies `npm install`
+  2. Install dependencies `npm install`
   3. Run development server `npm run start`
 
 ### Running Tests
