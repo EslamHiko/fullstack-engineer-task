@@ -1,4 +1,4 @@
-# Alvalabs Full Stack Software Engineer Task
+# Full Stack Software Engineer Task
 
 ### Features
 
